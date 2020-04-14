@@ -53,7 +53,117 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+
+//Varibles
+@font-color-main: darkblue;
+@background-color-main: lightskyblue;
+
+//Mixins
+.custom-color(){
+	color: @font-color-main;
+	font-family: cursive;
 }
+
+.custom-background(){
+	background-color: @background-color-main;
+}
+
+
+html, body {
+	height: 100%;
+	
+}
+
+	
+.container {
+	margin:0 auto
+}
+
+h1{
+	font-size: 50px;
+	text-align: center;
+	padding: 5%;
+	.custom-color()
+}
+
+
+h2{
+	padding: 2.5%;
+}
+
+header{
+	padding: 10%;
+	margin: 0 auto;
+	font-size: 20px;
+	background-color: lightcoral;
+	
+	nav{
+		margin-bottom: 20px;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		
+		a{
+			color: white;
+			text-decoration: none;
+			font-size: 23px;
+		}
+
+	}
+
+}
+
+.about{
+	font-size: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	padding: 10%;
+	.custom-background();
+}	
+
+
+
+.work{
+	font-size: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	background-color: plum;
+	padding: 10%;
+
+}
+.skills{
+	font-size: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	.custom-background();
+	padding: 5%;
+}
+footer{
+	background-color: lightcoral;
+	padding: 5%;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	 
+	 @media (max-width: 500px){
+		 display: none;
+	 }
+	
+	nav a{
+		text-decoration: none;
+		font-size: 20px;
+
+	}	
+
+}
+
+    
+ 
+
+	
+
+
 
